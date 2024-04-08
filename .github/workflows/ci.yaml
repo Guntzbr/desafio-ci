@@ -1,0 +1,13 @@
+name: desafio-ci-sonarcloud
+on:
+  pull_request:
+    branches:
+      - develop 
+
+jobs:
+  run-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 20.11
